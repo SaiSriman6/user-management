@@ -1,0 +1,24 @@
+###create user
+POST http://localhost:4002/user-api/users
+Content-Type: application/json
+
+{
+    "name":"mickey",
+    "email":"mickey@gmail.com",
+    "dob":"2002-08-12",
+    "mobileno":"9878976533"
+}
+
+
+### read all users
+GET http://localhost:4002/user-api/users
+
+
+###read user by id
+GET http://localhost:4002/user-api/users/69a681aee639f6eeea5dff0e
+
+###Soft Delete by id
+DELETE  http://localhost:4002/user-api/users/69a68e88f2296cb048c7044a
+
+###activate user
+PATCH http://localhost:4002/user-api/users/69a68e88f2296cb048c7044a
