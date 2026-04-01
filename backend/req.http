@@ -1,5 +1,7 @@
+@baseUrl = http://localhost:4002
+
 ###create user
-POST http://localhost:4002/user-api/users
+POST {{baseUrl}}/user-api/users
 Content-Type: application/json
 
 {
@@ -11,14 +13,14 @@ Content-Type: application/json
 
 
 ### read all users
-GET http://localhost:4002/user-api/users
+GET {{baseUrl}}/user-api/users
 
 
 ###read user by id
-GET http://localhost:4002/user-api/users/69a681aee639f6eeea5dff0e
+GET {{baseUrl}}/user-api/users/69ccfe499d0fc22d92a1f0f6
 
 ###Soft Delete by id
-DELETE  http://localhost:4002/user-api/users/69a68e88f2296cb048c7044a
+DELETE  {{baseUrl}}/user-api/users/69ccfe499d0fc22d92a1f0f6
 
 ###activate user
-PATCH http://localhost:4002/user-api/users/69a68e88f2296cb048c7044a
+PATCH {{baseUrl}}/user-api/users/69ccfe499d0fc22d92a1f0f6

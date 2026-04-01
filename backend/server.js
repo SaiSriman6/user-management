@@ -10,9 +10,7 @@ config()
 //create http server
 const app=exp();
 //add use
-app.use(cors({
-  origin:['http://localhost:5173']
-}))
+app.use(cors());
 //add body parser
 app.use(exp.json());
 //forward to user-api

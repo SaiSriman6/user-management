@@ -33,9 +33,15 @@ function AddUser() {
             setLoading(false);
         }
     }
-    if(loading === true){
-    return <p className='text-4xl text-red-600'>Loading...</p>
-    }
+    if (loading === true) {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <p className="text-4xl font-semibold text-red-600 animate-pulse">
+        Loading...
+      </p>
+    </div>
+  );
+}
    
   return (
   <div className="flex justify-center mt-10">
