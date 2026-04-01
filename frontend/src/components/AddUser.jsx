@@ -12,7 +12,7 @@ function AddUser() {
         setLoading(true);
        // console.log(obj)
         try{
-            let res=await fetch("http://localhost:4002/user-api/users",{
+            let res=await fetch(`${import.meta.env.VITE_API_URL}/user-api/users`,{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",

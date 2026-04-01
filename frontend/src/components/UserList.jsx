@@ -9,7 +9,7 @@ function UserList() {
     async function getUsers() {
       try {
         setLoading(true)
-        let res = await fetch("http://localhost:4002/user-api/users")
+        let res = await fetch(`${import.meta.env.VITE_API_URL}/user-api/users`)
         if (res.status === 200) {
           let data = await res.json()
           setUsers(data.payload)
