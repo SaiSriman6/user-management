@@ -10,11 +10,14 @@ config()
 //create http server
 const app=exp();
 //add use
-app.use(cors());
+app.use(cors({
+  origin:['https://user-management-j82c.vercel.app']
+}))
 //add body parser
 app.use(exp.json());
 //forward to user-api
 app.use('/user-api',userAPI)
+
 const connectDB=async()=>{
   try{
     await connect(process.env.DB_URL)
